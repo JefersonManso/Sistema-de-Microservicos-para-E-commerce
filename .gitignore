@@ -1,0 +1,47 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.temp
+
+# Visual Studio
+.vs/
+.vscode/
+*.sln.cache
+*.userprefs
+
+# Entity Framework
+**/Migrations/__EFMigrationsHistory/
+
+# Appsettings (if containing secrets)
+**/appsettings.Development.json
+**/appsettings.Local.json
+
+# NuGet
+packages/
+*.nupkg
+
+# Rider
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Test results
+TestResults/
+*.trx
+
+# RabbitMQ (if local)
+# (No specific ignores, but if using local queues, maybe data dirs)
+
+# Docker (future)
+.dockerignore

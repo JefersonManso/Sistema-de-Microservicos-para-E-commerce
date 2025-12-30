@@ -1,0 +1,55 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/inventory/api/products",
+      "UpstreamHttpMethod": ["GET", "POST", "PUT", "DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/inventory/api/products/{id}",
+      "UpstreamHttpMethod": ["GET", "PUT", "DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/sales/api/orders",
+      "UpstreamHttpMethod": ["GET", "POST", "PUT"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/orders/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/sales/api/orders/{id}",
+      "UpstreamHttpMethod": ["GET", "PUT"]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
